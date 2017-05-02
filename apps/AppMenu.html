@@ -1,0 +1,126 @@
+<!-- AppMenu.html -->
+
+<!doctype html>
+<title>App Menu</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="AppUI.css">
+
+<style>
+    #shutdown:hover, #restart:hover {
+        color: rgb(100, 255, 100);
+    }
+    
+    img:hover {
+        background-color: rgb(70, 70, 70);
+    }
+    
+    img {
+        width: 60px;
+        height: 60px;
+    }
+</style>
+
+<html>
+    <h1 id="title">LunarOS - Launching</h1>
+    <br>
+    <br>
+    <div id= "content">
+        <h2>System:</h2>
+        <button id="shutdown", onclick="window.close()">Shutdown</button>
+        <button id="restart", onclick="restart()">Restart</button>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <h2>Apps:</h2>
+        <button onclick="clock()">Clock</button>
+        <br>
+        <button onclick="websearch()">Websearch</button>
+        <br>
+        <button onclick="imagesearch()">Imagesearch</button>
+        <br>
+        <button onclick="textwriter()">Textwriter</button>
+        <br>
+        <button onclick="terminal()">Terminal</button>
+        <br>
+        <button onclick="stopwatch()">Stopwatch</button>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div id="web">
+        <h2>Web:</h2>
+        <img src="images\youtube.png", onclick="youtube()"></img>
+        <img src="images\google.png", onclick="google()"></img>
+        <img src="images\facebook.png", onclick="facebook()"></img>
+        <img src="images\twitter.png", onclick="twitter()"></img>
+        <img src="images\amazon.png", onclick="amazon()"></img>
+    </div>
+</html>
+
+<script>
+    window.setInterval(updateTitle, 1000);
+    
+    function clock() {
+        window.location = "Clock.html";
+    }
+    
+    function websearch() {
+        window.location = "Websearch.html";
+    }
+    
+    function imagesearch() {
+        window.location = "Imagesearch.html";
+    }
+    
+    function textwriter() {
+        window.location = "Textwriter.html";
+    }
+    
+    function terminal() {
+        window.location = "Terminal.html";
+    }
+    
+    function stopwatch() {
+        window.location = "Stopwatch.html";
+    }
+    
+    function youtube() {
+        window.location = "https://www.youtube.com";   
+    }
+    
+    function google() {
+        window.location = "https://www.google.com";
+    }
+    
+    function facebook() {
+        window.location = "https://www.facebook.com";
+    }
+    
+    function twitter() {
+        window.location = "https://www.twitter.com";
+    }
+    
+    function amazon() {
+        window.location = "https://www.amazon.com"
+    }
+    
+    function updateTitle() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        var fulltime = hours+":"+minutes+":"+seconds;
+        document.getElementById("title").innerHTML = "LunarOS - " + fulltime;
+    }
+    
+    function restart() {
+        window.location = "AppMenu.html";
+    }
+</script>

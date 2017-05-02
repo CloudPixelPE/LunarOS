@@ -1,0 +1,26 @@
+<!-- Clock.html --> 
+
+<!doctype html>
+<title>Clock</title>
+
+<link rel="stylesheet" type="text/css" href="AppUI.css">
+
+<html>
+<h1>Clock</h1>
+<br>
+<br>
+<h2 id= "timeDisplay">Time: </h2>
+</html>
+
+<script>
+window.setInterval(update, 1000);
+    
+function update() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var fullTime = hours+":"+minutes+":"+seconds;
+    document.getElementById("timeDisplay").innerHTML = "Time: " + fullTime;
+}
+</script>

@@ -1,0 +1,44 @@
+/* AppUI.css */
+
+h1, h2, h3, h4, h5, h6, p, li {
+    color: white;
+    text-align: center;
+    font-family: arial;
+}
+
+body {
+    background-color: rgb(50, 50, 50);
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: rgb(50, 50, 50);
+    font-family: arial;
+    border: none;
+    font-size: 25px;
+}
+
+button:hover {
+    color: rgb(100, 100, 255);
+}
+
+input {
+    font-family: arial;
+    font-size: 25px;
+    background-color: rgb(100, 100, 100);
+    border: none;
+    color: white;
+}
+
+textarea {
+    font-family: arial;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(100, 100, 100);
+    width: 600px;
+    height: 400px;
+}

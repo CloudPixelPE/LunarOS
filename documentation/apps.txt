@@ -1,0 +1,4 @@
+In the apps folder, you will find all the apps that come with LunarOS.
+You will also find a CSS file and some JavaScript files.
+The CSS file is the UI plugin for all the LunarOS default apps.
+The JavaScript files are all plugins that can be used to code your own HTML LunarOS apps.

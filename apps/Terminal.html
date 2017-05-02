@@ -1,0 +1,105 @@
+<!-- Terminal.html -->
+
+<!doctype html>
+<title>Terminal</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="AppUI.css">
+
+<html>
+    <h1 id="title">Terminal</h1>
+    <br>
+    <br>
+    <div id="content">
+        <input id="command", placeholder="Command:", spellcheck="false"></input>
+        <input id="args", placeholder="Args:", spellcheck="false"></input>
+        <button onclick="execute()">Execute</button>
+        <br>
+        <br>
+        <textarea id="output", placeholder="Type 'help' for help.", spellcheck="false"></textarea>
+    </div>
+</html>
+
+<script>
+    var terminal = document.getElementById("output");
+    
+    function execute() {
+        var command = document.getElementById("command").value;
+        var args = document.getElementById("args").value;
+        
+        if (command == "help") {
+            showHelp();
+        }
+        
+        if (command == "clear") {
+            clear();
+        }
+        
+        if (command == "time") {
+            showTime();
+        }
+        
+        if (command == "popup") {
+            alert(args);
+        }
+        
+        if (command == "print") {
+            terminal.append(args+"\n");
+        }
+        
+        if (command == "log") {
+            console.log(args);
+        }
+        
+        if (command == "changetitle") {
+            document.getElementById("title").innerHTML = args;
+        }
+        
+        if (command == "redirect") {
+            window.location = args;
+        }
+        
+        if (command == "opentab") {
+            window.open(args);
+        }
+        
+        if (command == "reboot") {
+            window.location = "AppMenu.html";
+        }
+        
+        if (command == "docwrite") {
+            document.write(args);
+        }
+        
+        if (command == "rand") {
+            var num = Math.random();
+            num = num * 100000;
+            num = Math.round(num);
+            terminal.append(num+"\n");
+        }
+    }
+    
+    function showHelp() {
+        terminal.append("help: Shows all the available terminal commands.\n");
+        terminal.append("clear: Clears the terminal.\n");
+        terminal.append("time: Displays the current time.\n");
+        terminal.append("popup (text): Displays a popup.\n");
+        terminal.append("print (text): Prints text into the terminal.\n");
+        terminal.append("log (text): Logs text into the developer console.\n");
+        terminal.append("changetitle (text): Changes the title of the webpage.\n");
+        terminal.append("redirect (URL): Redirects the user to the entered URL.\n");
+        terminal.append("opentab (URL): Opens a new tab to the entered URL.\n");
+        terminal.append("reboot: Goes back to the App Menu.\n");
+        terminal.append("docwrite (text): Writes text on top of the webpage.\n");
+        terminal.append("rand: Prints a random number.\n");
+    }
+    
+    function clear() {
+        window.location = "Terminal.html";
+    }
+    
+    function showTime() {
+        var date = new Date();
+        terminal.append(date+"\n");
+    }
+</script>

@@ -1,0 +1,43 @@
+<!-- Stopwatch.html -->
+
+<!doctype html>
+<title>Stopwatch</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="AppUI.css">
+
+<html>
+    <h1>Stopwatch</h1>
+    <br>
+    <br>
+    <div id="main">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+        <h3 id="display">Seconds Elapsed: </h3>
+    </div>
+</html>
+
+<script>
+    var seconds = 0;
+    var interval;
+    
+    function start() {
+        interval = window.setInterval(count, 1000);
+    }
+    
+    function stop() {
+        window.clearInterval(interval);
+    }
+    
+    function reset() {
+        seconds = 0;
+        stop();
+        document.getElementById("display").innerHTML = "Seconds Elapsed: " + seconds;
+    }
+    
+    function count() {
+        seconds++;
+        document.getElementById("display").innerHTML = "Seconds Elapsed: " + seconds;
+    }
+</script>

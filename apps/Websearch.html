@@ -1,0 +1,28 @@
+<!-- Websearch.html -->
+
+<!doctype html>
+<meta charset="utf-8">
+<title>Websearch</title>
+
+<link rel="stylesheet" type="text/css" href="AppUI.css">
+
+<html>
+    <div id= "content">
+        <h1>Websearch</h1>
+        <br>
+        <br>
+        <input id="inputString", placeholder="Search:"></input>
+        <button onclick= "process()">Search</button>
+    </div>
+</html>
+
+<script>
+    function process() {
+        var enteredSearch = document.getElementById("inputString").value;
+        search(enteredSearch);
+    }
+    
+    function search(enteredSearch) {
+        window.location = "https://www.google.com/#q=" + enteredSearch;
+    }
+</script>
