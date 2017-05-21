@@ -1,7 +1,5 @@
 <h1>LunarOS</h1>
-<p>A set of HTML pages written to simulate a cloud operating system.</p>
-
-<br>
+<p>A lightweight set of HTML pages written to simulate a cloud operating system.</p>
 
 <h3>Hardware Reccomendations</h3>
 <ul>
