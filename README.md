@@ -3,6 +3,12 @@
 
 <br>
 
+<h3>Hardware Reccomendations</h3>
+<ul>
+<li>1GB DDR3 or better.</li>
+<li>At least 570KB of HDD / SSD space.</li>
+</ul>
+
 <h3>"Booting" LunarOS</h3>
 <ul>
 <li><code>boot-windows.cmd</code> for all versions of Windows.</li>
